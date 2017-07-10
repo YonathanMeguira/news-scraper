@@ -1,3 +1,8 @@
+
+#CyberSecurityNewsScraper
+
+to get the news just perform a get request to : 'https://cyber-news-scrapr.herokuapp.com/news' and you will get the corresponding JSON
+
 # node-js-getting-started
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
