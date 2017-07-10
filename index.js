@@ -6,6 +6,7 @@ app.all('*', function (req, res, next) {
     var origin = req.get('origin');
     res.header('Access-Control-Allow-Origin', '*');
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, OPTIONS");
+    res.header('Access-Control-')
     return next();
 });
 
