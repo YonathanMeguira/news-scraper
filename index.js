@@ -2,6 +2,15 @@ var express = require('express');
 var app = express();
 var news_scrapper = require('./lib/cyber-news-scrapper');
 
+app.all('*', function(req, res, next) {
+    var origin = req.get('origin');
+    res.header('Access-Control-Allow-Origin', origin);
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
+
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
