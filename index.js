@@ -4,7 +4,7 @@ var news_scrapper = require('./lib/cyber-news-scrapper');
 
 app.all('*', function (req, res, next) {
     var origin = req.get('origin');
-    res.header('Access-Control-Allow-Origin', 'localhost:4200');
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, OPTIONS");
     res.header('Access-Control-Expose-Headers', 'Authorization')
